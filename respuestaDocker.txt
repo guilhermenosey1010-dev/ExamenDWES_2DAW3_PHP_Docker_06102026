@@ -11,3 +11,15 @@ Diapositivas{
     4: 29
 }
 }
+Comando: 
+docker run -d --name mi_web -p 8080:80 nginx
+
+1. docker run: crea y arranca un contenedor.
+2. -d: lo deja funcionando en segundo plano.
+3. --name mi_web: pone al contenedor el nombre mi_web.
+4. -p 8080:80: conecta el puerto 8080 del ordenador con el 80 del contenedor.
+5. nginx: usa la imagen del servidor web Nginx.
+
+profe david en youtube{
+    https://youtu.be/tZILsiA2sOE?si=bKADIeWYkudCtFjV
+}
