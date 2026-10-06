@@ -9,17 +9,43 @@
         <h2>Formulario de solicitud</h2>
         <button onclick="location.href='../php/tabla.php?tipo=soldadura'">Soldadura</button>
         <button onclick="location.href='../php/tabla.php?tipo=informatica'">Informática</button>
-        <button onclick="location.href='../php/tabla.php?tipo=socio'">Asistencia Sociosanitaria</button>
+        <button onclick="location.href='../php/tabla.php?tipo=asistencia%20sociosanitaria'">Asistencia Sociosanitaria</button>
         <form action="../php/tabla.php" method="POST">
-            <!-- Añade aquí todos los datos que te pido en el enunciado -->
-            Nombre: <input type="text name="nombre" />
-            Apellidos: <input type="text" name="apellidos" />
-            DNI: <input type="text" name="DNI" />
-            fecha de nacimiento: <input type="text" name="f_nac" />
-            Telefono: <input type="text" name="tlf" />
-            Email: <input type="text" name="email" />
-            jornadaParcial: <input type="text" name="apellidos" />
-            Idiomas: <input type="text" name="idiomas">
-        <form>
+    Nombre: <input type="text" name="nombre" required><br>
+    Apellidos: <input type="text" name="apellidos" required><br>
+    DNI: <input type="text" name="dni" required><br>
+    Fecha de nacimiento: <input type="date" name="f_nac" required><br>
+    Teléfono: <input type="tel" name="tlf" required><br>
+    Email: <input type="email" name="email" required><br>
+
+    Profesión:
+    <select name="tipo" required>
+        <option value="soldadura">Soldadura</option>
+        <option value="informatica">Informática</option>
+        <option value="asistencia sociosanitaria">Asistencia sociosanitaria</option>
+    </select><br>
+
+    Jornada:
+    <label>
+        <input type="radio" name="jornadaParcial" value="1" required>
+        Parcial
+    </label>
+    <label>
+        <input type="radio" name="jornadaParcial" value="0">
+        Completa
+    </label><br>
+
+    Idiomas:
+    <label>
+        <input type="checkbox" name="idiomas[]" value="Euskera">
+        Euskera
+    </label>
+    <label>
+        <input type="checkbox" name="idiomas[]" value="Español">
+        Español
+    </label><br>
+
+    <input type="submit" value="Enviar">
+</form>
     </body>
 </html>
