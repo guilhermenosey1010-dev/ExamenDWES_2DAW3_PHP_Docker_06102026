@@ -22,8 +22,12 @@
         
         <?php 
         // Aquí tenéis que crear la tabla de solicitantes de ese tipo
+        $conexion = mysqli_connect("localhost", "guilherme", "", "cae") or die("Problemas con la conexión");
+
+
         
         ?>
+        
         <button onclick="location.href='../html/index.html'">Volver al formulario</button>
     </body>
 </html>
